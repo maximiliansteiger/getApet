@@ -129,21 +129,22 @@
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="734dp"
+        android:layout_marginTop="740dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/button"
             android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="13dp"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
             android:text="Dislike" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="13dp"
+            android:layout_height="100dp"
+            android:layout_margin="15dp"
             android:text="Like" />
     </TableRow>
 
