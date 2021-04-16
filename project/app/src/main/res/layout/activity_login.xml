@@ -14,12 +14,13 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="524dp"
-        android:layout_height="860dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintHorizontal_bias="0.336"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/dogbg" />
 
     <EditText
@@ -53,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/username" />
 
     <Button
-        android:id="@+id/signup"
+        android:id="@+id/switchLogViewButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
@@ -71,7 +72,7 @@
         app:layout_constraintVertical_bias="0.082" />
 
     <Button
-        android:id="@+id/login2"
+        android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
