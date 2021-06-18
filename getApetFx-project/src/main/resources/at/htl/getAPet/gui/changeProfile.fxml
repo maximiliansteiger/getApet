@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.htl.getAPet.gui.controllers.ChangeProfile">
+    <children>
+        <BorderPane prefHeight="400.0" prefWidth="600.0">
+            <center>
+                <GridPane prefHeight="144.0" prefWidth="331.0" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="385.0" minWidth="100.0" prefWidth="206.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="379.0" minWidth="10.0" prefWidth="374.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label prefHeight="17.0" prefWidth="105.0" text="Current Name:" GridPane.rowIndex="1" />
+                        <Label prefHeight="17.0" prefWidth="99.0" text="Current Email:" GridPane.rowIndex="3" />
+                        <Label prefHeight="17.0" prefWidth="100.0" text="Current Password" GridPane.rowIndex="5" />
+                        <Label fx:id="currentNameField" prefHeight="17.0" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="currentEmailField" prefHeight="17.0" prefWidth="412.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="currentPasswordLabel" prefHeight="17.0" prefWidth="506.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label text="Current Phone Number:" GridPane.rowIndex="7" />
+                        <Label fx:id="currentPhoneNumberField" prefHeight="17.0" prefWidth="494.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <Button fx:id="backButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="199.0" text="Back to mainpage" GridPane.rowIndex="9" />
+                        <Label prefHeight="17.0" prefWidth="198.0" text="Your Account">
+                            <font>
+                                <Font name="System Bold" size="27.0" />
+                            </font>
+                        </Label>
+                        <Label text="New Name:" GridPane.rowIndex="2" />
+                        <TextField fx:id="newNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="New Email:" GridPane.rowIndex="4" />
+                        <Label text="New Password:" GridPane.rowIndex="6" />
+                        <Label text="New Phone Number:" GridPane.rowIndex="8" />
+                        <TextField fx:id="newEmailTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="newPasswordTextField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="newPhoneNumberTextField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <Button fx:id="saveButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="434.0" text="Save" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </GridPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

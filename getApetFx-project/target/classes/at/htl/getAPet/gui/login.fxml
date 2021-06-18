@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="584.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.htl.getAPet.gui.controllers.LoginController">
+    <children>
+        <Label layoutX="275.0" layoutY="46.0" prefHeight="73.0" prefWidth="152.0" text="LOGIN" textFill="#21b7e1">
+            <font>
+                <Font size="50.0" />
+            </font>
+        </Label>
+        <TextField fx:id="loginNameField" layoutX="188.0" layoutY="224.0" prefHeight="35.0" prefWidth="323.0" promptText="name" />
+        <PasswordField fx:id="loginPasswordField" layoutX="189.0" layoutY="275.0" prefHeight="35.0" prefWidth="323.0" promptText="password" />
+        <Button fx:id="login_loginButton" layoutX="410.0" layoutY="398.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="101.0" text="Login" textFill="#21b7e1">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+      <Button fx:id="login_signUpButton" layoutX="189.0" layoutY="398.0" mnemonicParsing="false" text="Sign up" textFill="#21b7e1">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="errorMessageLabel" layoutX="307.0" layoutY="328.0" prefHeight="17.0" prefWidth="85.0" textFill="RED" />
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="584.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.htl.getAPet.gui.controllers.regCodeController">
+    <children>
+        <Label layoutX="241.0" layoutY="179.0" text="Enter the Code">
+            <font>
+                <Font size="32.0" />
+            </font>
+        </Label>
+        <TextField fx:id="codeField" layoutX="187.0" layoutY="269.0" prefHeight="47.0" prefWidth="325.0" promptText="Code" />
+        <Button fx:id="sendCodeButton" layoutX="296.0" layoutY="418.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="102.0" text="Done" />
+        <Label fx:id="errorCode" layoutX="336.0" layoutY="337.0" />
+      <Label fx:id="messageEmail" layoutX="160.0" layoutY="132.0" prefHeight="17.0" prefWidth="374.0" textAlignment="CENTER" AnchorPane.bottomAnchor="435.0" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="132.0" />
+    </children>
+</AnchorPane>
