@@ -11,5 +11,6 @@ public interface UserRepository {
     void updateUser(User user);
     void addUser(User user);
     void deleteUser(User user);
+    int findLastAnimal(int id);
 
 }

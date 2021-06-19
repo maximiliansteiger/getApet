@@ -39,17 +39,15 @@ public class addPetController {
     @FXML
     public RadioButton femaleRadioButton;
 
-
     public ToggleGroup gender = new ToggleGroup();
+    public TextField imageURLField;
     private AnimalDbRepository animalDbRepository;
-
 
     @FXML
     private void initialize() {
         DataSourceFactory factory = new SimpleDataSourceFactory("get_a_pet");
         DataSource dataSource = factory.createDataSource();
         animalDbRepository = new AnimalDbRepository(dataSource);
-
 
         addButton.setOnAction(actionEvent -> {
             createAnimal();
@@ -58,10 +56,8 @@ public class addPetController {
 
         closeButton.setOnAction(actionEvent -> changeSceneToMain());
 
-
         maleRadioButton.setToggleGroup(gender);
         femaleRadioButton.setToggleGroup(gender);
-
 
         addButton.disableProperty().bind(
                 nameField.textProperty().isEmpty()
@@ -72,19 +68,11 @@ public class addPetController {
                         .or(heightField.textProperty().isEmpty())
                         .or(weightField.textProperty().isEmpty())
                         .or(cityField.textProperty().isEmpty())
-
         );
-   maleRadioButton.setOnAction(actionEvent -> {
-       System.out.println(maleRadioButton.isSelected());
-   });
-        femaleRadioButton.setOnAction(actionEvent -> {
-            System.out.println(maleRadioButton.isSelected());
-        });
 
     }
 
     private void changeSceneToMain() {
-
         try {
             App.setScene("myAccount");
         } catch (IOException e) {
@@ -94,7 +82,6 @@ public class addPetController {
     }
 
     private void createAnimal() {
-
         Gender gender = getGenderOfAnimal();
 
         animalDbRepository.createAnimal(
@@ -106,17 +93,14 @@ public class addPetController {
                 Double.parseDouble(heightField.getText()),
                 Double.parseDouble(weightField.getText()),
                 cityField.getText(),
-                App.getUser()
-
+                App.getUser(),
+                imageURLField.getText()
         );
 
     }
 
     private Gender getGenderOfAnimal() {
-        return (maleRadioButton.isSelected())?Gender.MALE:Gender.FEMALE;
-
-
-
+        return (maleRadioButton.isSelected()) ? Gender.MALE : Gender.FEMALE;
     }
 
     private void clearFields() {
@@ -130,6 +114,5 @@ public class addPetController {
         weightField.clear();
         cityField.clear();
     }
-
 
 }

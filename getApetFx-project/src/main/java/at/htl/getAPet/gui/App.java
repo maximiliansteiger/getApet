@@ -20,6 +20,7 @@ public class App extends Application {
     private static Stage mainStage;
     public static User user;
     public static int code;
+    private static int lastAnimal = 1;
 
     @Override
     public void start(Stage stage) {
@@ -67,5 +68,18 @@ public class App extends Application {
 
     public static void setCode(int code) {
         App.code = code;
+    }
+
+    public static int getLastAnimal() {
+        return lastAnimal;
+    }
+
+    public static void setLastAnimal(int lastAnimal) {
+        App.lastAnimal = lastAnimal;
+    }
+
+    public static void addOneToLastAnimal(){
+        App.lastAnimal++;
+        System.out.println(App.lastAnimal);
     }
 }

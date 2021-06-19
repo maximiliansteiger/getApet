@@ -15,6 +15,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+
 import java.security.MessageDigest;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -25,30 +26,46 @@ import javax.sql.DataSource;
 
 public class ChangeProfile {
 
-
-    @FXML private Label nameField;
-    @FXML private Label emailField;
-    @FXML private Label phoneNumberField;
-
-
+    @FXML
+    private Label nameField;
+    @FXML
+    private Label emailField;
+    @FXML
+    private Label phoneNumberField;
+    @FXML
     public ToggleGroup gender = new ToggleGroup();
-    @FXML private Label passwordField;
-    @FXML private Button testMailButton;
-    @FXML private Button backButton;
-    @FXML private Label currentNameField;
-    @FXML private Label currentEmailField;
-    @FXML private Label currentPasswordLabel;
-    @FXML private Label currentPhoneNumberField;
-    @FXML private TextField newNameTextField;
-    @FXML private TextField newEmailTextField;
-    @FXML private TextField newPhoneNumberTextField;
-    @FXML private TextField newPasswordTextField;
-    @FXML private Button saveButton;
-    @FXML private UserDbRepository animalDbRepository;
-    BooleanProperty codeIsRight = new SimpleBooleanProperty(false);
+    @FXML
+    private Label passwordField;
+    @FXML
+    private Button testMailButton;
+    @FXML
+    private Button backButton;
+    @FXML
+    private Label currentNameField;
+    @FXML
+    private Label currentEmailField;
+    @FXML
+    private Label currentPasswordLabel;
+    @FXML
+    private Label currentPhoneNumberField;
+    @FXML
+    private TextField newNameTextField;
+    @FXML
+    private TextField newEmailTextField;
+    @FXML
+    private TextField newPhoneNumberTextField;
+    @FXML
+    private TextField newPasswordTextField;
+    @FXML
+    private Button saveButton;
+
+
+    private UserDbRepository animalDbRepository;
+    private BooleanProperty codeIsRight = new SimpleBooleanProperty(false);
     private User currentUser = App.getUser();
-    DataSourceFactory factory = new SimpleDataSourceFactory("get_a_pet");
+    private DataSourceFactory factory = new SimpleDataSourceFactory("get_a_pet");
     private UserRepository userRepository = new UserDbRepository(factory.createDataSource());
+
     private String name = "";
     private String password = "";
     private String phoneNumber = "";
@@ -56,13 +73,11 @@ public class ChangeProfile {
 
 
     @FXML
-    public void initialize() throws Exception {
+    public void initialize() {
         DataSourceFactory factory = new SimpleDataSourceFactory("get_a_pet");
         DataSource dataSource = factory.createDataSource();
         animalDbRepository = new UserDbRepository(dataSource);
-
         showUserInfos();
-        //insertInformation();
         initButtons();
     }
 
@@ -78,40 +93,21 @@ public class ChangeProfile {
         saveButton.setOnAction(actionEvent -> save());
     }
 
-    private void save(){
-        System.out.println("1");
-        if(!newPhoneNumberTextField.getText().isEmpty()){
-            this.phoneNumber = newPhoneNumberTextField.getText();
-        }else{
-            this.phoneNumber = currentUser.getPhoneNr();
-        }
+    private void save() {
 
-        if(!newNameTextField.getText().isEmpty()){
-            this.name = newNameTextField.getText();
-        }else{
-            this.name = currentUser.getName();
-        }
+        this.phoneNumber = (!newPhoneNumberTextField.getText().isEmpty())?newPhoneNumberTextField.getText():currentUser.getPhoneNr();
+        this.name = (!newNameTextField.getText().isEmpty())?newNameTextField.getText():currentUser.getName();
+        this.email = (!newEmailTextField.getText().isEmpty())?newEmailTextField.getText():currentUser.getEmail();
 
-        if(!newEmailTextField.getText().isEmpty()){
-            this.email = newEmailTextField.getText();
-        }else{
-            this.email = currentUser.getEmail();
-        }
-
-        if(!newPasswordTextField.getText().isEmpty()){
+        if (!newPasswordTextField.getText().isEmpty()) {
             this.password = newPasswordTextField.getText();
             currentUser.setPassword(this.password);
-        }else{
+        } else {
             this.password = currentUser.getPassword();
         }
 
-        System.out.println(name);
-        System.out.println(email);
-        System.out.println(phoneNumber);
-        System.out.println(password);
         clear();
 
-        System.out.println("2");
         currentUser.setName(this.name);
         currentUser.setPhoneNr(this.phoneNumber);
         currentUser.setEmail(this.email);
@@ -128,7 +124,7 @@ public class ChangeProfile {
         newEmailTextField.clear();
     }
 
-    private void setScene(){
+    private void setScene() {
         try {
             App.setScene("MainPage");
         } catch (IOException e) {
@@ -143,8 +139,6 @@ public class ChangeProfile {
         emailField.setText(user.getEmail());
         phoneNumberField.setText(user.getPhoneNr());
     }
-
-
 
 
 }

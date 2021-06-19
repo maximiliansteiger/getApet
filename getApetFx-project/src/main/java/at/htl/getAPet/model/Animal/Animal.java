@@ -14,8 +14,9 @@ public class Animal {
     private double weight;
     private String city;
     private User owner;
+    private String imageURL;
 
-    public Animal(int id,String name, int age, Gender gender, String species,String breed, double height, double weight, String city, User owner) {
+    public Animal(int id, String name, int age, Gender gender, String species, String breed, double height, double weight, String city, User owner, String imageURL) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -26,6 +27,15 @@ public class Animal {
         this.weight = weight;
         this.city = city;
         this.owner = owner;
+        this.imageURL = imageURL;
+    }
+
+    public String getImgURL() {
+        return imageURL;
+    }
+
+    public void setImgURL(String imageURL) {
+        this.imageURL = imageURL;
     }
 
     public String getName() {

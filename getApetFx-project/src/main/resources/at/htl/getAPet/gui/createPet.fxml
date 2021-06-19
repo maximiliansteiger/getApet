@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="584.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.htl.getAPet.gui.controllers.addPetController">
+<AnchorPane prefHeight="584.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.htl.getAPet.gui.controllers.addPetController">
    <children>
       <Label layoutX="286.0" layoutY="14.0" text="Add a Pet" textFill="#21b7e1">
          <font>
@@ -28,13 +28,9 @@
             <Font size="22.0" />
          </font>
       </Button>
-      <Button layoutX="191.0" layoutY="514.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="323.0" text="Add Image">
-         <font>
-            <Font size="22.0" />
-         </font>
-      </Button>
       <ImageView fitHeight="213.0" fitWidth="323.0" layoutX="191.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true" />
       <RadioButton fx:id="maleRadioButton" layoutX="47.0" layoutY="136.0" mnemonicParsing="false" text="Male" />
       <RadioButton fx:id="femaleRadioButton" layoutX="176.0" layoutY="136.0" mnemonicParsing="false" text="Female" />
+      <TextField fx:id="imageURLField" layoutX="188.0" layoutY="292.0" prefHeight="35.0" prefWidth="323.0" promptText="ImageURL" />
    </children>
 </AnchorPane>

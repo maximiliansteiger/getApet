@@ -20,7 +20,7 @@ public class LoginDbRepository implements LoginRepository {
     public boolean login(String name, String password) {
         try (Connection connection = dataSource.getConnection()) {
 
-            String sqlString = "SELECT id,name,email,password,phoneNr from get_a_pet.user WHERE name=? and password=md5(?)";
+            String sqlString = "SELECT id,name,email,password,phoneNr,lastAnimal from get_a_pet.user WHERE name=? and password=md5(?)";
 
             PreparedStatement login = connection.prepareStatement(sqlString, Statement.RETURN_GENERATED_KEYS);
             login.setString(1, name);
@@ -31,7 +31,7 @@ public class LoginDbRepository implements LoginRepository {
             if (results.next()) {
 
                 System.out.println("logged in");
-                App.setUser(new User(results.getInt("id"), results.getString("name"), results.getString("email"), results.getString("password"),results.getString("phoneNr")));
+                App.setUser(new User(results.getInt("id"), results.getString("name"), results.getString("email"), results.getString("password"),results.getString("phoneNr"), results.getInt("lastAnimal")));
 
                 return true;
             } else {

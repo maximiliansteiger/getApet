@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.stage.PopupWindow;
 
 import javax.sql.DataSource;
 import java.io.IOException;
@@ -22,6 +23,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import javafx.beans.property.ReadOnlyObjectProperty;
 
 public class myAccountController {
     @FXML
@@ -41,6 +43,7 @@ public class myAccountController {
     public Button showMoreButton;
     @FXML
     Button editProfileButton;
+    ReadOnlyObjectProperty<Animal> animal;
 
     ObservableList<Animal> animalsOwner = FXCollections.observableArrayList();
     ObservableList<Animal> animalsLiked = FXCollections.observableArrayList();
@@ -53,6 +56,7 @@ public class myAccountController {
         AnimalDbRepository animalDbRepository = new AnimalDbRepository(dataSource);
         LikesDbRepository likesDbRepository = new LikesDbRepository(dataSource);
         User user = App.getUser();
+        animal = likedList.getSelectionModel().selectedItemProperty();
 
         //get the pets where user is owner
         animalsOwner.addAll(animalDbRepository.findByUser(user));
@@ -100,7 +104,7 @@ public class myAccountController {
 
         System.out.println(user);
 
-
+//        showMoreButton.disableProperty().bind(animal.get());
     }
 
     private void changeSceneToRegCode() {

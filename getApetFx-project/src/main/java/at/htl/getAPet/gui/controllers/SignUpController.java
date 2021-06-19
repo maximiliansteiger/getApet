@@ -33,7 +33,6 @@ public class SignUpController {
     @FXML
     private void initialize() {
 
-
         DataSourceFactory factory = new SimpleDataSourceFactory("get_a_pet");
         DataSource dataSource = factory.createDataSource();
         signUpRepository = new SignUpDbRepository(dataSource);
@@ -41,15 +40,11 @@ public class SignUpController {
         signup_loginButton.setOnAction(actionEvent -> switchViewToLogin());
 
         signup_signupButton.setOnAction(actionEvent -> {
-
-                    if (signUpRepository.createAccount(signupNameField.getText(), signupEmailField.getText(), signupPasswordField.getText(),signupTellNrButton.getText()) != null) {
-                        switchViewToLogin();
-                    }
-
-
-                }
-        );
-
+            if (signUpRepository.createAccount(signupNameField.getText(), signupEmailField.getText(),
+                    signupPasswordField.getText(), signupTellNrButton.getText(), 0) != null) {
+                switchViewToLogin();
+            }
+        });
 
     }
 

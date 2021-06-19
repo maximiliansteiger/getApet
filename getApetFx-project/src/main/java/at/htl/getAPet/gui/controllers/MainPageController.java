@@ -55,33 +55,29 @@ public class MainPageController {
 
         AnimalDbRepository animalDbRepository = new AnimalDbRepository(dataSource);
         LikesDbRepository likesDbRepository = new LikesDbRepository(dataSource);
-        List<Animal> animalList = animalDbRepository.findAll();
-        mainImage.setImage(new Image("https://upload.wikimedia.org/wikipedia/commons/9/9b/HTBLA_Leonding.jpg"));
+        UserDbRepository userDbRepository = new UserDbRepository(dataSource);
 
+        List<Animal> animalList = animalDbRepository.findAll(userDbRepository.findLastAnimal(App.user.getId()));
 
-        // get the user
-        System.out.println(App.getUser());
-
-
-        displayPetStats(animalList.get(index));
+        if (animalList.size() > 0) {
+            Animal animal = animalList.get(index);
+            displayPetStats(animal);
+        }
 
         User user = App.getUser();
         likeBtn.setOnAction(actionEvent -> {
+            App.addOneToLastAnimal();
             if (index < animalList.size() - 1) {
-
-                likesDbRepository.insertInformation(user, animalList.get(index));
-                System.out.println(animalList.get(index));
-                //mainImage.setImage(new Image("../../data/images/Image_1Bello"));
-                //shows the next animal
+                Animal animal = animalList.get(index);
+                likesDbRepository.insertInformation(user, animal);
                 displayPetStats(animalList.get(++index));
-
-
             } else {
                 displayNoMorePets();
             }
         });
 
         dislikeBtn.setOnAction(actionEvent -> {
+            App.addOneToLastAnimal();
             if (index < animalList.size() - 1) {
                 displayPetStats(animalList.get(++index));
             } else {
@@ -90,18 +86,14 @@ public class MainPageController {
         });
 
         accountButton.setOnAction(actionEvent -> {
-
-            //updates user when account is called so it not so much traffic all the time
+            App.getUser().setLastAnimal(App.getLastAnimal());
+            userDbRepository.updateUser(App.getUser());
             toMyAccount();
         });
-
-        System.out.println(App.getUser());
-
 
     }
 
     private void toMyAccount() {
-
         try {
             App.setScene("myAccount");
         } catch (IOException e) {
@@ -126,15 +118,11 @@ public class MainPageController {
         ageField.setText(String.valueOf(animal.getAge()));
         genderField.setText(String.valueOf(animal.getGender()));
         breedField.setText(animal.getBreed());
-
         heightField.setText(String.valueOf(animal.getHeight()));
         weightField.setText(String.valueOf(animal.getWeight()));
         cityField.setText(animal.getCity());
         ownerField.setText(animal.getOwner().getName());
-        //mainImage.setImage(new Image("https://upload.wikimedia.org/wikipedia/commons/9/9b/HTBLA_Leonding.jpg"));
-        //mainImage.setImage(new Image("../../../../../../data/Image_1Bello.jpg"));
-
+        mainImage.setImage(new Image(animal.getImgURL()));
     }
-
 
 }

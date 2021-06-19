@@ -15,7 +15,7 @@ public class SignUpDbRepository implements SignUpRepository{
     }
 
     @Override
-    public User createAccount(String name, String email, String password,String phoneNr) {
+    public User createAccount(String name, String email, String password,String phoneNr,int lastAnimal) {
 
             try (Connection connection = dataSource.getConnection()) {
 
@@ -37,7 +37,7 @@ public class SignUpDbRepository implements SignUpRepository{
                 ResultSet keys = statement.getGeneratedKeys();
 
                 if (keys.next()) {
-                    return new User(keys.getInt("id"), name, email,password,phoneNr);
+                    return new User(keys.getInt("id"), name, email,password,phoneNr, lastAnimal);
                 } else {
                     throw new SQLException("Failed to insert");
                 }

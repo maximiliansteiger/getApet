@@ -12,20 +12,29 @@ public class User {
     private String email;
     private String password;
     private String phoneNr;
+    private int lastAnimal;
     private List<Animal> animalArrayList = new ArrayList<>();
 
 
-    public User(int id, String name, String email, String password,String phoneNr) {
+    public User(int id, String name, String email, String password, String phoneNr, int lastAnimal) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.password = password;
         this.phoneNr = phoneNr;
+        this.lastAnimal = lastAnimal;
     }
     public User(){
 
     }
 
+    public int getLastAnimal() {
+        return lastAnimal;
+    }
+
+    public void setLastAnimal(int lastAnimal) {
+        this.lastAnimal = lastAnimal;
+    }
 
     public String getPhoneNr() {
         return phoneNr;
@@ -77,7 +86,10 @@ public class User {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", Password='" + password + '\'' +
+                ", password='" + password + '\'' +
+                ", phoneNr='" + phoneNr + '\'' +
+                ", lastAnimal=" + lastAnimal +
+                ", animalArrayList=" + animalArrayList +
                 '}';
     }
 }

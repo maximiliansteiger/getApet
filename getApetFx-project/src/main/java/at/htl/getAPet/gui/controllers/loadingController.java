@@ -34,7 +34,6 @@ public class loadingController {
 
         int time = 1000;
 
-
         progress(0.1, time += Math.floor(Math.random() * (300 - 500 + 1) + 500));
         progress(0.2, time += Math.floor(Math.random() * (300 - 500 + 1) + 500));
         progress(0.3, time += Math.floor(Math.random() * (300 - 500 + 1) + 500));
@@ -46,9 +45,6 @@ public class loadingController {
         progress(0.9, time += Math.floor(Math.random() * (300 - 500 + 1) + 500));
         progress(1,   time += Math.floor(Math.random() * (300 - 500 + 1) + 500));
 
-
-
-
     }
 
 
@@ -57,7 +53,6 @@ public class loadingController {
             @Override
             public void run() {
                 progressBar.setProgress(value);
-//                switchViewToLogin();
 
                 if (value == 1) {
                     toLoginButton.setOnAction(actionEvent -> changeSceneToLogin());

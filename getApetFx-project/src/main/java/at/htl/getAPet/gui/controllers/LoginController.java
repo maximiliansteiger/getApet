@@ -29,7 +29,6 @@ public class LoginController {
     public Label errorMessageLabel;
 
 
-
     @FXML
     private void initialize() {
         DataSourceFactory factory = new SimpleDataSourceFactory("get_a_pet");
@@ -39,16 +38,13 @@ public class LoginController {
         login_signUpButton.setOnAction(actionEvent -> switchViewToSignUp());
         login_loginButton.setOnAction(actionEvent -> {
 
-
             if (loginDbRepository.login(loginNameField.getText(), loginPasswordField.getText())) {
                 loginSuccess();
-            }else{
+            } else {
                 loginFailed();
             }
 
-
         });
-
 
     }
 
@@ -67,7 +63,7 @@ public class LoginController {
     }
 
     private void loginSuccess() {
-        int value = (int) (10000+(Math.random()*999999));
+        int value = (int) (10000 + (Math.random() * 999999));
         App.setCode(value);
         try {
             App.setScene("MainPage");
