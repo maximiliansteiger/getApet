@@ -22,36 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f5ca5f0-f405-475c-9c3a-ab0761d4360d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_mac_15_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_mac_15_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_mac_15_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_mac_15_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../getApetFx-test/getAPet.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../getApetFx-test/getAPetFx.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/getAPet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/getAPet_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_15_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_15_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_15_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_15_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="2f5ca5f0-f405-475c-9c3a-ab0761d4360d" name="Default Changelist" comment="Working on Projekt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getAPet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/getAPet.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/getAPet/gui/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/getAPet/gui/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/getAPet/gui/controllers/MainPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/getAPet/gui/controllers/MainPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/getAPet/gui/controllers/ShowAnimalData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/getAPet/gui/controllers/ShowAnimalData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/htl/getAPet/gui/controllers/myAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/htl/getAPet/gui/controllers/myAccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/at/htl/getAPet/gui/MainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/at/htl/getAPet/gui/MainPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/at/htl/getAPet/gui/animalData.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/at/htl/getAPet/gui/animalData.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/at/htl/getAPet/gui/changeProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/at/htl/getAPet/gui/changeProfile.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/at/htl/getAPet/gui/regCode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/at/htl/getAPet/gui/regCode.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/getAPet/gui/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/getAPet/gui/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/getAPet/gui/animalData.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/getAPet/gui/animalData.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/getAPet/gui/controllers/ShowAnimalData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/getAPet/gui/controllers/ShowAnimalData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/getAPet/gui/controllers/myAccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/getAPet/gui/controllers/myAccountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/getAPet/model/Animal/Gender.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/getAPet/model/Animal/Gender.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/getAPet/gui/MainPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/getAPet/gui/MainPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/getAPet/gui/changeProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/getAPet/gui/changeProfile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/getAPet/gui/controllers/MainPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/getAPet/gui/controllers/MainPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/at/htl/getAPet/gui/regCode.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/at/htl/getAPet/gui/regCode.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,8 +103,16 @@
       <option name="presentableId" value="Default" />
       <updated>1624256254289</updated>
       <workItem from="1624256256262" duration="3351000" />
-      <workItem from="1624273213353" duration="1366000" />
+      <workItem from="1624273213353" duration="2357000" />
     </task>
+    <task id="LOCAL-00001" summary="Working on Projekt">
+      <created>1624274762946</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1624274762946</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -141,6 +126,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Working on Projekt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on Projekt" />
   </component>
   <component name="WindowStateProjectService">
     <state x="208" y="27" key="#Project_Structure" timestamp="1624256271352">
@@ -167,5 +156,9 @@
     </state>
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1624274489102" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/0.25.1440.823@0.25.1440.823" timestamp="1624274170001" />
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2" timestamp="1624282205250">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="187" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1624282205250" />
   </component>
 </project>
