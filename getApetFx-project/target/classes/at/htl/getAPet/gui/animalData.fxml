@@ -46,14 +46,15 @@
                 <Label text="Height:" GridPane.rowIndex="5" />
                 <Label text="Weight:" GridPane.rowIndex="6" />
                 <Label text="City:" GridPane.rowIndex="7" />
-                <Label fx:id="petName" prefHeight="17.0" prefWidth="236.0" GridPane.columnIndex="1" />
-                <Label fx:id="perageLabel" prefHeight="17.0" prefWidth="271.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <Label fx:id="petgenderLabel" prefHeight="17.0" prefWidth="257.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <Label fx:id="speciesLabel" prefHeight="17.0" prefWidth="251.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                <Label fx:id="breedLabel" prefHeight="17.0" prefWidth="316.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label fx:id="petName" prefHeight="17.0" prefWidth="236.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label fx:id="petAgeLabel" prefHeight="17.0" prefWidth="271.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label fx:id="petGenderLabel" prefHeight="17.0" prefWidth="257.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label fx:id="petSpeciesLabel" prefHeight="17.0" prefWidth="251.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label fx:id="petBreedLabel" prefHeight="17.0" prefWidth="316.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                 <Label fx:id="heightLabel" prefHeight="17.0" prefWidth="378.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                 <Label fx:id="weightLabel" prefHeight="17.0" prefWidth="236.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                <Label fx:id="cityLabel" prefHeight="17.0" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                <Label fx:id="petCityLabel" prefHeight="17.0" prefWidth="214.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label fx:id="petNameLabel" prefHeight="17.0" prefWidth="291.0" GridPane.columnIndex="1" />
             </children>
         </GridPane>
       <GridPane layoutX="367.0" layoutY="90.0">
@@ -68,22 +69,22 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="backButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="151.0" text="Back" GridPane.rowIndex="3">
+            <Button fx:id="backButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="137.0" text="Back" GridPane.rowIndex="3">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
                </GridPane.margin>
             </Button>
             <Button fx:id="backtomainButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="118.0" text="To Main" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="5.0" right="5.0" top="5.0" />
                </GridPane.margin>
             </Button>
             <Label text="Name:" />
             <Label text="E-Mail:" GridPane.rowIndex="1" />
             <Label text="Phonenumber:" GridPane.rowIndex="2" />
-            <Label fx:id="nameLabel" prefHeight="17.0" prefWidth="194.0" GridPane.columnIndex="1" />
-            <Label fx:id="emailLabel" prefHeight="17.0" prefWidth="197.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label fx:id="phonenumberLabel" prefHeight="17.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="userNameLabel" prefHeight="17.0" prefWidth="194.0" GridPane.columnIndex="1" />
+            <Label fx:id="userMailLabel" prefHeight="17.0" prefWidth="197.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="userPhoneNumberLabel" prefHeight="17.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
     </children>

@@ -1,24 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.AnchorPane?><?import javafx.scene.layout.BorderPane?><?import javafx.scene.layout.GridPane?><?import javafx.scene.layout.RowConstraints?><?import javafx.scene.layout.ColumnConstraints?><?import javafx.scene.control.Label?><?import javafx.scene.control.TextField?><?import javafx.geometry.Insets?><?import javafx.scene.control.Button?><?import javafx.scene.shape.CubicCurve?><?import javafx.scene.text.Font?>Elly — heute um 11:43 Uhr
+        <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.text.Font?>
+        <?import javafx.geometry.*?>
+        <?import javafx.scene.control.*?>
+        <?import javafx.scene.layout.*?>
+        <?import javafx.scene.shape.*?>
+        <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.htl.getAPet.gui.controllers.ChangeProfile">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.htl.getAPet.gui.controllers.ChangeProfile">
     <children>
-        <BorderPane prefHeight="400.0" prefWidth="600.0">
+        <BorderPane prefHeight="415.0" prefWidth="600.0" style="-fx-background-color: #fff;">
             <center>
-                <GridPane prefHeight="144.0" prefWidth="331.0" BorderPane.alignment="CENTER">
+                <GridPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="385.0" minWidth="100.0" prefWidth="206.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="379.0" minWidth="10.0" prefWidth="374.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="385.0" minWidth="100.0" prefWidth="207.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="379.0" minWidth="10.0" prefWidth="373.0" />
                     </columnConstraints>
                     <rowConstraints>
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -33,35 +29,58 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Label prefHeight="17.0" prefWidth="105.0" text="Current Name:" GridPane.rowIndex="1" />
-                        <Label prefHeight="17.0" prefWidth="99.0" text="Current Email:" GridPane.rowIndex="3" />
-                        <Label prefHeight="17.0" prefWidth="100.0" text="Current Password" GridPane.rowIndex="5" />
-                        <Label fx:id="currentNameField" prefHeight="17.0" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label fx:id="currentEmailField" prefHeight="17.0" prefWidth="412.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Label fx:id="currentPasswordLabel" prefHeight="17.0" prefWidth="506.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <Label text="Current Phone Number:" GridPane.rowIndex="7" />
-                        <Label fx:id="currentPhoneNumberField" prefHeight="17.0" prefWidth="494.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                        <Button fx:id="backButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="199.0" text="Back to mainpage" GridPane.rowIndex="9" />
-                        <Label prefHeight="17.0" prefWidth="198.0" text="Your Account">
-                            <font>
-                                <Font name="System Bold" size="27.0" />
-                            </font>
-                        </Label>
-                        <Label text="New Name:" GridPane.rowIndex="2" />
-                        <TextField fx:id="newNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label text="New Email:" GridPane.rowIndex="4" />
-                        <Label text="New Password:" GridPane.rowIndex="6" />
-                        <Label text="New Phone Number:" GridPane.rowIndex="8" />
-                        <TextField fx:id="newEmailTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <TextField fx:id="newPasswordTextField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                        <TextField fx:id="newPhoneNumberTextField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                        <Button fx:id="saveButton" mnemonicParsing="false" prefHeight="27.0" prefWidth="434.0" text="Save" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <Label prefHeight="17.0" prefWidth="105.0" text="Current Name:" />
+                        <Label prefHeight="17.0" prefWidth="99.0" text="Current Email:" GridPane.rowIndex="2" />
+                        <Label prefHeight="17.0" prefWidth="100.0" text="Current Password" GridPane.rowIndex="4" />
+                        <Label fx:id="currentNameField" prefHeight="17.0" prefWidth="180.0" GridPane.columnIndex="1" />
+                        <Label fx:id="currentEmailField" prefHeight="17.0" prefWidth="412.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="currentPasswordLabel" prefHeight="17.0" prefWidth="506.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label text="Current Phone Number:" GridPane.rowIndex="6" />
+                        <Label fx:id="currentPhoneNumberField" prefHeight="17.0" prefWidth="494.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label text="New Name:" GridPane.rowIndex="1" />
+                        <TextField fx:id="newNameTextField" prefHeight="25.0" prefWidth="344.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <GridPane.margin>
+                                <Insets right="50.0" />
+                            </GridPane.margin></TextField>
+                        <Label text="New Email:" GridPane.rowIndex="3" />
+                        <Label text="New Password:" GridPane.rowIndex="5" />
+                        <Label text="New Phone Number:" GridPane.rowIndex="7" />
+                        <TextField fx:id="newEmailTextField" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <GridPane.margin>
+                                <Insets right="50.0" />
+                            </GridPane.margin></TextField>
+                        <TextField fx:id="newPasswordTextField" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                            <GridPane.margin>
+                                <Insets right="50.0" />
+                            </GridPane.margin></TextField>
+                        <TextField fx:id="newPhoneNumberTextField" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                            <GridPane.margin>
+                                <Insets right="50.0" />
+                            </GridPane.margin></TextField>
+                        <Button fx:id="backButton" mnemonicParsing="false" prefHeight="29.0" prefWidth="130.0" style="-fx-background-color: #1e90ff; -fx-border-color: #fff; -fx-border-width: 2;" text="Back to mainpage" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <Button fx:id="saveButton" mnemonicParsing="false" prefHeight="29.0" prefWidth="172.0" style="-fx-background-color: #1e90ff; -fx-border-color: #fff; -fx-border-width: 2;" text="Save" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                            <GridPane.margin>
+                                <Insets left="150.0" />
+                            </GridPane.margin>
+                        </Button>
                     </children>
                     <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                     </padding>
+                    <BorderPane.margin>
+                        <Insets bottom="20.0" top="60.0" />
+                    </BorderPane.margin>
                 </GridPane>
             </center>
         </BorderPane>
+        <CubicCurve controlX1="-103.20529174804688" controlX2="50.0" controlY1="83.79470825195312" controlY2="100.0" endX="200.79470825195312" fill="DODGERBLUE" layoutX="56.0" startX="-150.0" stroke="WHITE" />
+        <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="14.0" text="Your Account" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="22.0" />
+            </font>
+        </Label>
     </children>
 </AnchorPane>

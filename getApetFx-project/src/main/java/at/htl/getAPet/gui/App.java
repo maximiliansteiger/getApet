@@ -1,5 +1,6 @@
 package at.htl.getAPet.gui;
 
+import at.htl.getAPet.model.Animal.Animal;
 import at.htl.getAPet.model.User.User;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -19,8 +20,11 @@ public class App extends Application {
 
     private static Stage mainStage;
     public static User user;
+    public static Animal animal;
     public static int code;
     private static int lastAnimal = 1;
+
+
 
     @Override
     public void start(Stage stage) {
@@ -76,6 +80,14 @@ public class App extends Application {
 
     public static void setLastAnimal(int lastAnimal) {
         App.lastAnimal = lastAnimal;
+    }
+
+    public static Animal getAnimal() {
+        return animal;
+    }
+
+    public static void setAnimal(Animal para) {
+        animal = para;
     }
 
     public static void addOneToLastAnimal(){

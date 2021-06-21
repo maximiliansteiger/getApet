@@ -1,6 +1,8 @@
 package at.htl.getAPet.gui.controllers;
 
 import at.htl.getAPet.gui.App;
+import at.htl.getAPet.model.Animal.Animal;
+import at.htl.getAPet.model.User.User;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -9,53 +11,61 @@ import java.io.IOException;
 import java.io.UncheckedIOException;
 
 public class ShowAnimalData {
-    public Label petName;
-    public Label age;
-    public Label gender;
-    public Label species;
-    public Label breed;
-    public Label height;
-    public Label weight;
-    public Label city;
-    public Label ownerName;
-    public Label email;
-    public Label pNumber;
-    public Button backButton;
-    public Button mainButton;
 
+
+    public Label petName;
+    public Label petAgeLabel;
+    public Label petGenderLabel;
+    public Label petSpeciesLabel;
+    public Label petBreedLabel;
+    public Label heightLabel;
+    public Label weightLabel;
+    public Label petCityLabel;
+    public Label petNameLabel;
+    public Button backButton;
+    public Button backtomainButton;
+    public Label userNameLabel;
+    public Label userMailLabel;
+    public Label userPhoneNumberLabel;
+
+    private Animal animal;
+    private User user;
 
     @FXML
     private void initialize(){
-
-
-        setupData();
-
+        user = App.getUser();
+        animal = App.getAnimal();
+        System.out.println("----------------");
+        System.out.println(user);
+        System.out.println(animal);
+        showAnimalData();
+        showUserData();
+        initButtons();
         backButton.setOnAction(actionEvent -> changeSceneToMyAccount());
         backButton.setOnAction(actionEvent -> changeSceneToMain());
 
     }
 
-    private void setupData() {
+    private void showAnimalData() {
+        petNameLabel.setText(animal.getName());
+        petAgeLabel.setText(animal.getAge()+"");
+        petGenderLabel.setText(animal.getGender().name());
+        petSpeciesLabel.setText(animal.getSpecies());
+        petBreedLabel.setText(animal.getBreed());
+        petCityLabel.setText(animal.getCity());
+        weightLabel.setText(animal.getWeight()+"");
+        heightLabel.setText(animal.getHeight()+"");
+    }
 
+    private void showUserData() {
+        userNameLabel.setText(user.getName());
+        userMailLabel.setText(user.getEmail());
+        userPhoneNumberLabel.setText(user.getPhoneNr());
+    }
 
-        //TODO get the selected animal and somehow use it here
-
-
-//        petName.setText();
-//          age;
-//          gender;
-//          species;
-//          breed;
-//          height;
-//          weight;
-//          city;
-//          ownerName;
-//          email;
-//          pNumber;
-
-
-
-
+    private void initButtons() {
+        backButton.setOnAction(actionEvent -> changeSceneToMyAccount());
+        backtomainButton.setOnAction(actionEvent -> changeSceneToMain());
     }
 
     private void changeSceneToMyAccount() {

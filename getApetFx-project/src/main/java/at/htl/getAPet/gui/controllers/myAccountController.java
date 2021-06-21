@@ -44,10 +44,11 @@ public class myAccountController {
     @FXML
     Button editProfileButton;
     ReadOnlyObjectProperty<Animal> animal;
-
+    ReadOnlyObjectProperty<Animal> selectedAnimal = null;
     ObservableList<Animal> animalsOwner = FXCollections.observableArrayList();
     ObservableList<Animal> animalsLiked = FXCollections.observableArrayList();
 
+    Animal animalSelected = null;
 
     @FXML
     private void initialize() {
@@ -57,7 +58,11 @@ public class myAccountController {
         LikesDbRepository likesDbRepository = new LikesDbRepository(dataSource);
         User user = App.getUser();
         animal = likedList.getSelectionModel().selectedItemProperty();
-
+        animal.addListener((observableValue, o, t1) -> {
+            if(animal!=null){
+                App.setAnimal(animal.getValue());
+            }
+        });
         //get the pets where user is owner
         animalsOwner.addAll(animalDbRepository.findByUser(user));
         yourPetList.setItems(animalsOwner);
@@ -77,7 +82,7 @@ public class myAccountController {
         animalsLiked.addAll();
         likedList.setItems(animalsLiked);
 
-
+        selectedAnimal = likedList.getSelectionModel().selectedItemProperty();
         profileUsername.setText(user.getName());
         profileEmailField.setText(user.getEmail());
         profilePhoneNrField.setText(user.getPhoneNr());

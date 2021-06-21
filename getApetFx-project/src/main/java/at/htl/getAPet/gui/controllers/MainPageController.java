@@ -46,6 +46,7 @@ public class MainPageController {
     public ImageView mainImage;
     @FXML
     public Button accountButton;
+    public Button logOutButton;
     private int index = 0;
 
     @FXML
