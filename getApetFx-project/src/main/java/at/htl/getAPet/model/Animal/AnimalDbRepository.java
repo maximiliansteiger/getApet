@@ -138,6 +138,7 @@ public class AnimalDbRepository implements AnimalRepository {
             statement.setDouble(7, weight);
             statement.setString(8, city);
             statement.setInt(9, owner.getId());
+            statement.setString(10,imageURL);
 
             int update = statement.executeUpdate();
             if (update == 0) {

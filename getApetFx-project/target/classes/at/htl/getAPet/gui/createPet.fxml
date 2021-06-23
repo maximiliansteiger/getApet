@@ -1,36 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="584.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.htl.getAPet.gui.controllers.addPetController">
+<AnchorPane prefHeight="584.0" prefWidth="707.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.htl.getAPet.gui.controllers.addPetController">
    <children>
-      <Label layoutX="286.0" layoutY="14.0" text="Add a Pet" textFill="#21b7e1">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="532.0" layoutX="142.0" layoutY="37.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="3.0" width="428.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="45.0" layoutX="278.0" layoutY="15.0" stroke="WHITE" strokeType="INSIDE" width="156.0" />
+      <Label layoutX="291.0" layoutY="15.0" text="Add a Pet">
          <font>
             <Font size="30.0" />
          </font></Label>
-      <TextField fx:id="nameField" layoutX="14.0" layoutY="76.0" prefHeight="35.0" prefWidth="323.0" promptText="Name" />
-      <TextField fx:id="ageField" layoutX="352.0" layoutY="76.0" prefHeight="35.0" prefWidth="323.0" promptText="Age" />
-      <TextField fx:id="breedField" layoutX="14.0" layoutY="176.0" prefHeight="35.0" prefWidth="323.0" promptText="Breed" />
-      <TextField fx:id="heightField" layoutX="350.0" layoutY="176.0" prefHeight="35.0" prefWidth="323.0" promptText="Height" />
-      <TextField fx:id="speciesField" layoutX="350.0" layoutY="127.0" prefHeight="35.0" prefWidth="323.0" promptText="Species" />
-      <TextField fx:id="weightField" layoutX="14.0" layoutY="229.0" prefHeight="35.0" prefWidth="323.0" promptText="Weight" />
-      <TextField fx:id="cityField" layoutX="350.0" layoutY="229.0" prefHeight="35.0" prefWidth="323.0" promptText="City" />
-      <Button fx:id="addButton" layoutX="568.0" layoutY="514.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="90.0" text="Add" textFill="#187c0e">
+      <TextField fx:id="nameField" layoutX="191.0" layoutY="66.0" prefHeight="35.0" prefWidth="323.0" promptText="Name" />
+      <TextField fx:id="ageField" layoutX="192.0" layoutY="241.0" prefHeight="35.0" prefWidth="323.0" promptText="Age" />
+      <TextField fx:id="breedField" layoutX="191.0" layoutY="151.0" prefHeight="35.0" prefWidth="323.0" promptText="Breed" />
+      <TextField fx:id="heightField" layoutX="191.0" layoutY="330.0" prefHeight="35.0" prefWidth="323.0" promptText="Height" />
+      <TextField fx:id="speciesField" layoutX="191.0" layoutY="286.0" prefHeight="35.0" prefWidth="323.0" promptText="Species" />
+      <TextField fx:id="weightField" layoutX="191.0" layoutY="196.0" prefHeight="35.0" prefWidth="323.0" promptText="Weight" />
+      <TextField fx:id="cityField" layoutX="191.0" layoutY="375.0" prefHeight="35.0" prefWidth="323.0" promptText="City" />
+      <Button fx:id="addButton" layoutX="191.0" layoutY="513.0" minHeight="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="323.0" style="-fx-background-color: dodgerblue;" text="Add" textFill="WHITE">
          <font>
-            <Font size="22.0" />
+            <Font size="16.0" />
          </font>
       </Button>
-      <Button fx:id="closeButton" layoutX="47.0" layoutY="514.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="90.0" text="Close" textFill="#b2081f">
+      <Button fx:id="closeButton" layoutX="191.0" layoutY="471.0" minHeight="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="323.0" style="-fx-background-color: dodgerblue;" text="Close" textFill="WHITE">
          <font>
-            <Font size="22.0" />
+            <Font size="16.0" />
          </font>
       </Button>
-      <ImageView fitHeight="213.0" fitWidth="323.0" layoutX="191.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true" />
-      <RadioButton fx:id="maleRadioButton" layoutX="47.0" layoutY="136.0" mnemonicParsing="false" text="Male" />
-      <RadioButton fx:id="femaleRadioButton" layoutX="176.0" layoutY="136.0" mnemonicParsing="false" text="Female" />
-      <TextField fx:id="imageURLField" layoutX="188.0" layoutY="292.0" prefHeight="35.0" prefWidth="323.0" promptText="ImageURL" />
+      <RadioButton fx:id="maleRadioButton" layoutX="267.0" layoutY="116.0" mnemonicParsing="false" text="Male" />
+      <RadioButton fx:id="femaleRadioButton" layoutX="369.0" layoutY="116.0" mnemonicParsing="false" text="Female" />
+      <TextField fx:id="imageURLField" layoutX="191.0" layoutY="418.0" prefHeight="35.0" prefWidth="323.0" promptText="ImageURL" />
    </children>
 </AnchorPane>

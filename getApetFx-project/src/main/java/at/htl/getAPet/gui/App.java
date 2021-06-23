@@ -25,13 +25,12 @@ public class App extends Application {
     private static int lastAnimal = 1;
 
 
-
     @Override
     public void start(Stage stage) {
         try {
             mainStage = stage;
             setScene("loading");
-            mainStage.initStyle(StageStyle.UNDECORATED);
+//            mainStage.initStyle(StageStyle.UNDECORATED);
             mainStage.show();
         } catch (Exception e) {
             handleException(e);
@@ -44,9 +43,6 @@ public class App extends Application {
         Parent rootNode = fxmlLoader.load();
         mainStage.setScene(new Scene(rootNode));
         mainStage.resizableProperty().setValue(Boolean.FALSE);
-//        mainStage.initStyle(StageStyle.UTILITY);
-
-
     }
 
     private void handleException(Throwable e) {
@@ -94,4 +90,7 @@ public class App extends Application {
         App.lastAnimal++;
         System.out.println(App.lastAnimal);
     }
+
+
+
 }

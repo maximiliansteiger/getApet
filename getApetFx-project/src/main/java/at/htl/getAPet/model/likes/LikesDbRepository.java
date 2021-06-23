@@ -31,11 +31,9 @@ public class LikesDbRepository implements LikesRepository {
             statement.setInt(1, user.getId());
             statement.setInt(2, animal.getId());
 
-
             if (statement.executeUpdate() == 0) {
                 throw new SQLException("Failed to insert");
             }
-
 
         } catch (SQLException e) {
             throw new DataAccessException(e.getMessage(), e);
@@ -48,7 +46,6 @@ public class LikesDbRepository implements LikesRepository {
             String sql = "select id_user,id_animal from likes where id_user=?";
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setInt(1, user.getId());
-
             ResultSet res = statement.executeQuery();
 
             List<Integer> likedAnimals = new ArrayList<>();

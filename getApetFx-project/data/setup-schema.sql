@@ -78,8 +78,7 @@ values ('Bello', 5, 'MALE', 'Dog', 'Bulldog', 100, 30, 'Kirchdorf', 4,'https://c
        ('Tim',10, 'MALE', 'Dog', 'Bengal', 20, 40, 'Leonding', 7,'https://cdn.discordapp.com/attachments/781930875490926604/855398114571583488/dog-1868871_1920.jpg'),
        ('Rammler',5, 'MALE', 'Rabbit', 'Blue wiener', 20, 10, 'Leonding', 7,'https://cdn.discordapp.com/attachments/781930875490926604/855397587272073216/Blaue-Wiener-3.png'),
        ('Constance',5, 'FEMALE', 'Cat', 'persian Katze', 20, 4, 'Leonding', 7,'https://www.die-tier-welt.com/wp-content/uploads/2018/08/212958494_fotolia_perserkatze.jpg'),
-       ('geki',5, 'MALE', 'Gecko', 'Leopard gecko', 10, 0.04, 'Leonding', 7,'https://cdn.discordapp.com/attachments/781930875490926604/855396119956553798/gecko-1373165_1920.jpg'),
-       ('Knut',5, 'MALE', 'Dog', 'Bulldoge', 20, 20, 'Leonding', 7);
+       ('geki',5, 'MALE', 'Gecko', 'Leopard gecko', 10, 0.04, 'Leonding', 7,'https://cdn.discordapp.com/attachments/781930875490926604/855396119956553798/gecko-1373165_1920.jpg');
 
 
 

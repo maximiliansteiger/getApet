@@ -2,23 +2,26 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="584.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.htl.getAPet.gui.controllers.LoginController">
+<AnchorPane prefHeight="584.0" prefWidth="699.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.htl.getAPet.gui.controllers.LoginController">
     <children>
-        <Label layoutX="275.0" layoutY="46.0" prefHeight="73.0" prefWidth="152.0" text="LOGIN" textFill="#21b7e1">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="363.0" layoutX="149.0" layoutY="128.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="3.0" width="404.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="67.0" layoutX="258.0" layoutY="93.0" stroke="WHITE" strokeType="INSIDE" width="182.0" />
+        <Label layoutX="276.0" layoutY="90.0" prefHeight="73.0" prefWidth="152.0" text="LOGIN">
             <font>
                 <Font size="50.0" />
             </font>
         </Label>
         <TextField fx:id="loginNameField" layoutX="188.0" layoutY="224.0" prefHeight="35.0" prefWidth="323.0" promptText="name" />
         <PasswordField fx:id="loginPasswordField" layoutX="189.0" layoutY="275.0" prefHeight="35.0" prefWidth="323.0" promptText="password" />
-        <Button fx:id="login_loginButton" layoutX="410.0" layoutY="398.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="101.0" text="Login" textFill="#21b7e1">
+        <Button fx:id="login_loginButton" layoutX="190.0" layoutY="358.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="323.0" style="-fx-background-color: dodgerblue;" text="Login" textFill="WHITE">
             <font>
                 <Font size="18.0" />
             </font>
         </Button>
-      <Button fx:id="login_signUpButton" layoutX="189.0" layoutY="398.0" mnemonicParsing="false" text="Sign up" textFill="#21b7e1">
+      <Button fx:id="login_signUpButton" layoutX="190.0" layoutY="407.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="323.0" style="-fx-background-color: dodgerblue;" text="Sign up" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>

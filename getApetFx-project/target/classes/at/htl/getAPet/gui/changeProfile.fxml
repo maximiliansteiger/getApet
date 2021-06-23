@@ -1,17 +1,16 @@
-<?import javafx.scene.layout.AnchorPane?><?import javafx.scene.layout.BorderPane?><?import javafx.scene.layout.GridPane?><?import javafx.scene.layout.RowConstraints?><?import javafx.scene.layout.ColumnConstraints?><?import javafx.scene.control.Label?><?import javafx.scene.control.TextField?><?import javafx.geometry.Insets?><?import javafx.scene.control.Button?><?import javafx.scene.shape.CubicCurve?><?import javafx.scene.text.Font?>Elly — heute um 11:43 Uhr
-        <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-        <?import javafx.geometry.*?>
-        <?import javafx.scene.control.*?>
-        <?import javafx.scene.layout.*?>
-        <?import javafx.scene.shape.*?>
-        <?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="at.htl.getAPet.gui.controllers.ChangeProfile">
     <children>
         <BorderPane prefHeight="415.0" prefWidth="600.0" style="-fx-background-color: #fff;">
             <center>
-                <GridPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                <GridPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="313.0" prefWidth="570.0" BorderPane.alignment="CENTER">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="385.0" minWidth="100.0" prefWidth="207.0" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="379.0" minWidth="10.0" prefWidth="373.0" />
@@ -44,22 +43,26 @@
                             </opaqueInsets>
                             <GridPane.margin>
                                 <Insets right="50.0" />
-                            </GridPane.margin></TextField>
+                            </GridPane.margin>
+                        </TextField>
                         <Label text="New Email:" GridPane.rowIndex="3" />
                         <Label text="New Password:" GridPane.rowIndex="5" />
                         <Label text="New Phone Number:" GridPane.rowIndex="7" />
                         <TextField fx:id="newEmailTextField" GridPane.columnIndex="1" GridPane.rowIndex="3">
                             <GridPane.margin>
                                 <Insets right="50.0" />
-                            </GridPane.margin></TextField>
+                            </GridPane.margin>
+                        </TextField>
                         <TextField fx:id="newPasswordTextField" GridPane.columnIndex="1" GridPane.rowIndex="5">
                             <GridPane.margin>
                                 <Insets right="50.0" />
-                            </GridPane.margin></TextField>
+                            </GridPane.margin>
+                        </TextField>
                         <TextField fx:id="newPhoneNumberTextField" GridPane.columnIndex="1" GridPane.rowIndex="7">
                             <GridPane.margin>
                                 <Insets right="50.0" />
-                            </GridPane.margin></TextField>
+                            </GridPane.margin>
+                        </TextField>
                         <Button fx:id="backButton" mnemonicParsing="false" prefHeight="29.0" prefWidth="130.0" style="-fx-background-color: #1e90ff; -fx-border-color: #fff; -fx-border-width: 2;" text="Back to mainpage" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="9" />
                         <Button fx:id="saveButton" mnemonicParsing="false" prefHeight="29.0" prefWidth="172.0" style="-fx-background-color: #1e90ff; -fx-border-color: #fff; -fx-border-width: 2;" text="Save" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="9">
                             <GridPane.margin>
@@ -68,10 +71,10 @@
                         </Button>
                     </children>
                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
                     </padding>
                     <BorderPane.margin>
-                        <Insets bottom="20.0" top="60.0" />
+                        <Insets bottom="20.0" left="30.0" top="60.0" />
                     </BorderPane.margin>
                 </GridPane>
             </center>

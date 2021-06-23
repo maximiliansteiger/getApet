@@ -72,15 +72,6 @@ public class addPetController {
 
     }
 
-    private void changeSceneToMain() {
-        try {
-            App.setScene("myAccount");
-        } catch (IOException e) {
-            throw new UncheckedIOException(e.getMessage(), e);
-        }
-
-    }
-
     private void createAnimal() {
         Gender gender = getGenderOfAnimal();
 
@@ -113,6 +104,16 @@ public class addPetController {
         heightField.clear();
         weightField.clear();
         cityField.clear();
+    }
+
+
+    private void changeSceneToMain() {
+        try {
+            App.setScene("myAccount");
+        } catch (IOException e) {
+            throw new UncheckedIOException(e.getMessage(), e);
+        }
+
     }
 
 }

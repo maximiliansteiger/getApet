@@ -4,7 +4,6 @@ import at.htl.getAPet.gui.App;
 import at.htl.getAPet.model.Animal.Animal;
 import at.htl.getAPet.model.Animal.AnimalDbRepository;
 import at.htl.getAPet.model.User.User;
-import at.htl.getAPet.model.User.UserDbRepository;
 import at.htl.getAPet.model.datasource.DataSourceFactory;
 import at.htl.getAPet.model.datasource.SimpleDataSourceFactory;
 import at.htl.getAPet.model.likes.LikesDbRepository;
@@ -14,15 +13,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.stage.PopupWindow;
 
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
+
 import javafx.beans.property.ReadOnlyObjectProperty;
 
 public class myAccountController {
@@ -41,14 +38,14 @@ public class myAccountController {
     public Button backToMainPage;
     public Button signOutButton;
     public Button showMoreButton;
+    public Button deleteAnimalButton;
     @FXML
     Button editProfileButton;
-    ReadOnlyObjectProperty<Animal> animal;
+    ReadOnlyObjectProperty<Animal> animalLiked;
+    ReadOnlyObjectProperty<Animal> animalOwned;
     ReadOnlyObjectProperty<Animal> selectedAnimal = null;
     ObservableList<Animal> animalsOwner = FXCollections.observableArrayList();
     ObservableList<Animal> animalsLiked = FXCollections.observableArrayList();
-
-    Animal animalSelected = null;
 
     @FXML
     private void initialize() {
@@ -57,22 +54,22 @@ public class myAccountController {
         AnimalDbRepository animalDbRepository = new AnimalDbRepository(dataSource);
         LikesDbRepository likesDbRepository = new LikesDbRepository(dataSource);
         User user = App.getUser();
-        animal = likedList.getSelectionModel().selectedItemProperty();
-        animal.addListener((observableValue, o, t1) -> {
-            if(animal!=null){
-                App.setAnimal(animal.getValue());
+
+        animalLiked = likedList.getSelectionModel().selectedItemProperty();
+        animalOwned = yourPetList.getSelectionModel().selectedItemProperty();
+
+        animalLiked.addListener((observableValue, o, t1) -> {
+            if (animalLiked != null) {
+                App.setAnimal(animalLiked.getValue());
             }
         });
-        //get the pets where user is owner
+
         animalsOwner.addAll(animalDbRepository.findByUser(user));
         yourPetList.setItems(animalsOwner);
 
-        //get the pets the user liked
-
-//        String animals = likesDbRepository.getLikesPerUser(user);
-
         List<Animal> animals1 = new ArrayList<>();
-        for (Integer i :likesDbRepository.getLikesPerUser(user)) {
+        for (Integer i : likesDbRepository.getLikesPerUser(user)) {
+
             Animal animal = animalDbRepository.findById(i).get();
             animals1.add(animal);
             animalsLiked.add(animal);
@@ -101,15 +98,19 @@ public class myAccountController {
 
                 changeSceneToChangeProfile());
 
+        showMoreButton.setOnAction(actionEvent -> {
+            App.setAnimal(animalLiked.get());
+            changeSceneToRegCode();
+        });
 
-//        binding ob etwas ausgewählt is und dann die ausgewählten daten anzeigen!!!!!!!!!
-        showMoreButton.setOnAction(actionEvent ->
+        deleteAnimalButton.setOnAction(actionEvent -> {
+            animalDbRepository.remove(animalOwned.get());
+            yourPetList.getItems().remove(animalOwned.get());
+        });
 
-                changeSceneToRegCode());
+        showMoreButton.disableProperty().bind(animalLiked.isNull());
+        deleteAnimalButton.disableProperty().bind(animalOwned.isNull());
 
-        System.out.println(user);
-
-//        showMoreButton.disableProperty().bind(animal.get());
     }
 
     private void changeSceneToRegCode() {

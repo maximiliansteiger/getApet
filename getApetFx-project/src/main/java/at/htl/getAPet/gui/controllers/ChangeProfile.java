@@ -60,23 +60,17 @@ public class ChangeProfile {
     private Button saveButton;
 
 
-    private UserDbRepository animalDbRepository;
     private BooleanProperty codeIsRight = new SimpleBooleanProperty(false);
-    private User currentUser = App.getUser();
+    private User currentUser;
     private DataSourceFactory factory = new SimpleDataSourceFactory("get_a_pet");
     private UserRepository userRepository = new UserDbRepository(factory.createDataSource());
-
-    private String name = "";
-    private String password = "";
-    private String phoneNumber = "";
-    private String email = "";
 
 
     @FXML
     public void initialize() {
         DataSourceFactory factory = new SimpleDataSourceFactory("get_a_pet");
         DataSource dataSource = factory.createDataSource();
-        animalDbRepository = new UserDbRepository(dataSource);
+        currentUser = App.getUser();
         showUserInfos();
         initButtons();
     }
@@ -94,24 +88,24 @@ public class ChangeProfile {
     }
 
     private void save() {
+        String phoneNumber = (newPhoneNumberTextField.getText().isEmpty()) ? currentUser.getPhoneNr() : newPhoneNumberTextField.getText();
+        String name = (newNameTextField.getText().isEmpty()) ? currentUser.getName() : newNameTextField.getText();
+        String email = (newEmailTextField.getText().isEmpty()) ? currentUser.getEmail() : newEmailTextField.getText();
 
-        this.phoneNumber = (!newPhoneNumberTextField.getText().isEmpty())?newPhoneNumberTextField.getText():currentUser.getPhoneNr();
-        this.name = (!newNameTextField.getText().isEmpty())?newNameTextField.getText():currentUser.getName();
-        this.email = (!newEmailTextField.getText().isEmpty())?newEmailTextField.getText():currentUser.getEmail();
-
+        String password = "";
         if (!newPasswordTextField.getText().isEmpty()) {
-            this.password = newPasswordTextField.getText();
-            currentUser.setPassword(this.password);
+            password = newPasswordTextField.getText();
+            currentUser.setPassword(password);
         } else {
-            this.password = currentUser.getPassword();
+            password = currentUser.getPassword();
         }
 
         clear();
 
-        currentUser.setName(this.name);
-        currentUser.setPhoneNr(this.phoneNumber);
-        currentUser.setEmail(this.email);
-        currentUser.setPassword(this.password);
+        currentUser.setName(name);
+        currentUser.setPhoneNr(phoneNumber);
+        currentUser.setEmail(email);
+        currentUser.setPassword(password);
 
         userRepository.updateUser(currentUser);
         setScene();
@@ -131,14 +125,5 @@ public class ChangeProfile {
             e.printStackTrace();
         }
     }
-
-
-    private void insertInformation() {
-        User user = App.getUser();
-        nameField.setText(user.getName());
-        emailField.setText(user.getEmail());
-        phoneNumberField.setText(user.getPhoneNr());
-    }
-
 
 }

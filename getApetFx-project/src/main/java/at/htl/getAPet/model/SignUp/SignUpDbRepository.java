@@ -22,13 +22,10 @@ public class SignUpDbRepository implements SignUpRepository{
                 String sql = "insert into get_a_pet.user (name,email,password,phoneNr) values (?,?,md5(?),?)";
                 PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 
-
                 statement.setString(1, name);
                 statement.setString(2, email);
                 statement.setString(3,password);
                 statement.setString(4,phoneNr);
-
-
 
                 if (statement.executeUpdate() == 0) {
                     throw new SQLException("Failed to insert");

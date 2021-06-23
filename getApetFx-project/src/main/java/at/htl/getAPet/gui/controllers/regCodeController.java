@@ -23,9 +23,7 @@ public class regCodeController {
 
     @FXML
     private void initialize() {
-
         sendCodeButton.setOnAction(actionEvent -> checkCode());
-
         String userEmailAddress = App.getUser().getEmail();
         messageEmail.setText("we sent you a Email to: " + userEmailAddress);
 
@@ -40,7 +38,6 @@ public class regCodeController {
     private void checkCode() {
         int code = 0;
         if (!codeField.getText().equals("")) {
-
             try{
                  code = Integer.parseInt(codeField.getText());
             }catch(Exception e){

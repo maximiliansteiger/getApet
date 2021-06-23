@@ -112,6 +112,7 @@ public class MainPageController {
         weightField.setText("");
         cityField.setText("");
         ownerField.setText("");
+        mainImage.setImage(new Image(""));
     }
 
     private void displayPetStats(Animal animal) {
